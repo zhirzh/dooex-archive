@@ -1,0 +1,12 @@
+.root {
+  position: relative;
+  height: 100vh;
+
+  overflow-y: auto;
+}
+
+.rootNoScroll {
+  composes: root;
+
+  overflow-y: hidden;
+}

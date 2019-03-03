@@ -1,0 +1,39 @@
+.root {
+  composes: global(col-xs-4) global(col-sm-3) global(col-md-2);
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 10px;
+
+  z-index: 1;
+
+  background-color: white;
+  box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile {
+  composes: root;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: transform 240ms;
+  transform: translateY(0px);
+}
+
+.mobileHidden {
+  composes: mobile;
+
+  transform: translateY(100%);
+}
+
+.mobileSpaced {
+  composes: mobile;
+
+  transform: translateY(70px);
+}

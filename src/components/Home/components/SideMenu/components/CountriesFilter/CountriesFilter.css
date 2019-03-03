@@ -1,0 +1,9 @@
+.select {
+  composes: global(form-control);
+
+  text-transform: capitalize;
+}
+
+.option {
+  text-transform: capitalize;
+}

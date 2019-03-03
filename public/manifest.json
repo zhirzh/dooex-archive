@@ -1,0 +1,21 @@
+{
+  "author": "Shirsh Zibbu | zhirzh@github",
+  "background_color": "#fafafa",
+  "description": "A minimalist explorer for Google's vast collection of doodles",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-GB",
+  "manifest_version": 2,
+  "name": "DooEx - Google Doodles Explorer",
+  "orientation": "natural",
+  "short_name": "DooEx",
+  "start_url": "./",
+  "theme_color": "#fafafa",
+  "version": 2
+}

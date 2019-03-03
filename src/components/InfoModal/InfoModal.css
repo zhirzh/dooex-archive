@@ -1,0 +1,11 @@
+.root {
+  composes: global(modal) global(show);
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.body {
+  composes: global(modal-body);
+
+  padding-top: 10px;
+}

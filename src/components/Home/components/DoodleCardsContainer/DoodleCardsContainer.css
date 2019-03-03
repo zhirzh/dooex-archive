@@ -1,0 +1,12 @@
+.root {
+  margin-top: 8px;
+
+  transition: transform 240ms;
+  transform: translateY(0);
+}
+
+.rootFoo {
+  composes: root;
+
+  transform: translateY(-50px);
+}

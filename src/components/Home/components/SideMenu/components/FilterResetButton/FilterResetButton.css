@@ -1,0 +1,5 @@
+.root {
+  composes: global(btn) global(btn-link) global(btn-block);
+
+  color: initial !important;
+}

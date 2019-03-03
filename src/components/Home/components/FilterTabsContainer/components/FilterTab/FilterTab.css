@@ -1,0 +1,33 @@
+.root {
+  composes: global(alert) global(alert-dismissible);
+
+  display: inline-block;
+
+  padding: 5px 15px 5px 10px;
+  margin: 5px 5px;
+
+  background-color: #fdfdfd;
+  text-transform: capitalize;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 30ms, box-shadow 30ms;
+}
+
+.root:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.root:hover {
+  background-color: white;
+}
+
+.close {
+  composes: global(close);
+
+  top: 0px !important;
+  right: -10px !important;
+}
+
+.close {
+  opacity: 0.8 !important;
+}

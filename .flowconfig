@@ -1,0 +1,8 @@
+[ignore]
+.*/public/
+
+[include]
+
+[libs]
+
+[options]

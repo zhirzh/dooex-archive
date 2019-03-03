@@ -1,0 +1,20 @@
+.root {
+  composes: global(center-block);
+
+  margin-top: 15px;
+  transform: translateY(0);
+  height: 48px;
+
+  transition: transform 240ms;
+
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.hidden {
+  composes: root;
+
+  transform: translateY(-50px);
+
+  overflow: hidden;
+}

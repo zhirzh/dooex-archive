@@ -1,0 +1,35 @@
+.root {
+  composes: global(btn) global(btn-block) global(btn-default);
+
+  position: fixed;
+  bottom: 0px;
+
+  width: 100vw;
+
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0px 0px 10px gray;
+  transition: transform 240ms;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.hidden {
+  composes: root;
+
+  transform: translateY(100%);
+}
+
+.showFilterIcon {
+  composes: global(glyphicon) global(glyphicon-chevron-up);
+
+  transition: transform 100ms;
+  font-size: 1rem;
+  transform: rotate(180deg);
+}
+
+.hideFilterIcon {
+  composes: showFilterIcon;
+
+  transform: rotate(0);
+}
