@@ -1,0 +1,49 @@
+{
+  "name": "dooex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:app": "webpack -d",
+    "build:app:watch": "webpack -d -w",
+    "build:app:production": "webpack -p; mkdir -p dist/data/ && cp data/final/* dist/data/",
+
+    "build:appshell": "node build-appshell",
+    "build:appshell:watch": "node build-appshell -w",
+
+    "build:production": "npm run build:app:production; npm run build:appshell"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.13.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-import-resolver-webpack": "^0.8.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-merge": "^2.4.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "parser": "babel-eslint",
+
+    "extends": "airbnb",
+
+    "env": {
+        "browser": true,
+        "node": true
+    },
+
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+
+    "rules": {
+      "comma-dangle": 0,
+      "no-param-reassign": 0,
+      "react/prop-types": 0
+    },
+
+    "settings": {
+        "import/resolver": "webpack"
+    }
+}

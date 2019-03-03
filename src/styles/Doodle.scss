@@ -1,0 +1,45 @@
+#container {
+  border-top: 2px solid lightgray;
+}
+
+.card {
+  margin: 2em 0;
+  box-shadow: 5px 5px 15px lightgray;
+}
+
+.header label {
+  margin-bottom: 0;
+}
+
+.title {
+  margin-bottom: 0;
+
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.img {
+  background-color: #fafafa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+
+  width: 100%;
+  height: 50vh; /*TODO: find better alternative*/
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+}
+
+.stats > span {
+  a,
+  span {
+    margin: 2px;
+  }
+}

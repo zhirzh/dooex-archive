@@ -1,0 +1,125 @@
+const APP = 'DOOEX';
+const VERSION = {{version}};
+
+const appCache = `${APP}-app-${VERSION}`;
+const imgCache = `${APP}-img-${VERSION}`;
+
+const allCaches = [
+  appCache,
+  imgCache,
+];
+
+function updateCacheWithNetworkResponse(cache, request) {
+  return fetch(request).then((networkResponse) => {
+    cache.put(request, networkResponse.clone());
+    return networkResponse;
+  });
+}
+
+function cacheThenNetwork(cache, request) {
+  return cache.match(request).then((cacheResponse) => {
+    if (cacheResponse) {
+      return cacheResponse;
+    }
+
+    return updateCacheWithNetworkResponse(cache, request);
+  });
+}
+
+function deleteOldCaches(cacheNames) {
+  return Promise.all(
+    cacheNames
+      .filter(cacheName => cacheName.startsWith(APP))
+      .filter(cacheName => !allCaches.includes(cacheName))
+      .map(cacheName => caches.delete(cacheName))
+  );
+}
+
+self.addEventListener('install', (e) => {
+  self.skipWaiting();
+
+  const urls = [
+    './',
+    './css/index.css',
+    './js/index.js',
+
+    'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css',
+  ];
+
+  e.waitUntil(
+    caches.open(appCache).then(cache => cache.addAll(urls))
+  );
+});
+
+self.addEventListener('activate', (e) => {
+  if (self.clients && self.clients.claim) {
+    self.clients.claim();
+  }
+
+  e.waitUntil(
+    caches.keys().then(deleteOldCaches)
+  );
+});
+
+self.addEventListener('fetch', (e) => {
+  const requestUrl = new URL(e.request.url);
+
+  /*
+    replace cached data with new data, if any
+    return [newly] cached data
+  */
+  if (requestUrl.origin === location.origin) {
+    if (requestUrl.pathname.includes('/data/')) {
+      e.respondWith(
+        caches.open(appCache).then(cache => cacheThenNetwork(cache, e.request))
+      );
+
+      return;
+    }
+
+    /*
+      TODO: cannot cache iframe resources - find abother way out
+    */
+    if (requestUrl.pathname.includes('/saved/')) {
+      const resourceUrl = requestUrl.search.replace('?url=', '');
+      const resourceRequest = new Request(resourceUrl, e.request);
+
+      e.respondWith(
+        caches.open(appCache).then(cache => cacheThenNetwork(cache, resourceRequest))
+      );
+
+      return;
+    }
+  }
+
+  /*
+    return cached images, if any
+    cache [new] network images
+    return network images
+  */
+  if (requestUrl.origin === 'https://lh3.googleusercontent.com' || requestUrl.origin === 'https://www.google.com') {
+    e.respondWith(
+      caches.open(imgCache).then(cache => cacheThenNetwork(cache, e.request))
+    );
+
+    return;
+  }
+
+  /*
+    return cached assets, if any
+    return [new] network data
+  */
+  e.respondWith(caches.match(e.request).then(response => (response || fetch(e.request))));
+  return;
+
+  /*
+    log unknown requests
+  */
+  console.log(e.request.url);
+});
+
+self.addEventListener('message', (e) => {
+  if (e.data.shouldUpdate) {
+    self.skipWaiting();
+  }
+});
