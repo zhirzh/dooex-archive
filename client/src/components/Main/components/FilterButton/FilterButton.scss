@@ -1,0 +1,36 @@
+.root {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  z-index: 2;
+
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 20px #555;
+  font-size: 18px;
+  padding: 10px;
+
+  transform: translateY(0%);
+  transition: transform 120ms;
+
+  span {
+    font-size: 12px;
+    transform: rotate(-90deg);
+    transition: transform 120ms;
+  }
+}
+
+.hidden {
+  composes: root;
+
+  transform: translateY(100%);
+}
+
+.hideFilter {
+  composes: root;
+
+  span {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,31 @@
+.root {
+  composes: global(navbar) global(navbar-light) global(navbar-expand) global(fixed-top);
+
+  background-color: white;
+  box-shadow: 0 2px 4px #ddd;
+  justify-content: space-between;
+  padding: 0.22rem 0.5rem 0.28rem 0.2rem;
+}
+
+.back {
+  composes: global(navbar-brand);
+
+  margin-right: 0.2rem;
+}
+
+.reset {
+  composes: global(btn);
+
+  position: absolute;
+  right: 10px;
+
+  border-radius: 100%;
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 0;
+  padding: 0;
+
+  background-color: transparent;
+
+  font-size: 1.5rem;
+}

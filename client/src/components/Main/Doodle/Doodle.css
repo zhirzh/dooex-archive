@@ -1,0 +1,42 @@
+.root {
+  composes: global(card) global(mb-lg-3) global(mb-xl-4);
+
+  border-radius: 0;
+  border-color: #eee;
+
+  margin-top: -1px; /* covers up border overlap */
+  padding: 1px; /* prevent border flicker */
+}
+
+.header {
+  composes: global(card-header);
+
+  border: none;
+  background-color: white;
+  padding: 4px 4px 0;
+}
+
+.title {
+  margin: 0;
+  padding: 6px;
+}
+
+.actions {
+  composes: global(btn-group) global(btn-group-sm) global(float-right);
+
+  padding-right: 0.2rem;
+}
+
+.actions > * {
+  padding: 0.2rem !important;
+
+  background-color: transparent;
+  border: none;
+  color: #444;
+
+  font-size: 1.4rem !important;
+}
+
+.tileLink {
+  height: 200px;
+}

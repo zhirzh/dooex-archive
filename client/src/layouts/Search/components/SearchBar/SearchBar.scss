@@ -1,0 +1,38 @@
+@import "variables";
+
+.root {
+  composes: global(navbar) global(navbar-default) global(navbar-fixed-top) global(container-fluid);
+
+  height: $topbar-height;
+  z-index: 1;
+  padding: 0;
+
+  img {
+    height: $topbar-height - 2px;
+  }
+
+  a {
+    float: left;
+  }
+
+  div {
+    position: absolute;
+    left: $topbar-height;
+    right: 0px;
+
+    font-size: 18px;
+
+    input {
+      height: $topbar-height - 1px;
+      padding: 10px;
+      padding-right: $input-reset-size;
+      width: 100%;
+
+      border: none;
+      outline: none;
+
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+}

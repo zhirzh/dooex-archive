@@ -1,0 +1,21 @@
+.root {
+  composes: global(table);
+
+  margin-bottom: 0px;
+}
+
+.root tr:first-of-type td {
+  border: none;
+}
+
+.labelType {
+  text-transform: capitalize;
+}
+
+.badge {
+  composes: global(badge) global(badge-secondary);
+
+  display: inline-block;
+  margin-right: 4px;
+  text-transform: capitalize;
+}

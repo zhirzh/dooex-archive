@@ -1,0 +1,18 @@
+{
+  "author": "Shirsh Zibbu | zhirzh@github",
+  "background_color": "#f0f0f0",
+  "description": "Explore Google doodles",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon-sq.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "DooEx",
+  "orientation": "portrait",
+  "short_name": "DooEx",
+  "start_url": "/",
+  "theme_color": "#f0f0f0"
+}

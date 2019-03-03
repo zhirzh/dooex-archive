@@ -1,0 +1,6 @@
+@import "variables";
+
+.root {
+  transition: transform $filter-tabs-container-transition-duration;
+  transform: translateY(0px);
+}

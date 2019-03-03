@@ -1,0 +1,19 @@
+@import "variables";
+
+.root {
+  position: absolute;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: $input-reset-size;
+  padding: 0 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+.hidden {
+  composes: root;
+
+  display: none;
+}

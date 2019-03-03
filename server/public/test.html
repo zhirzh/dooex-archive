@@ -1,0 +1,29 @@
+<script>
+  const textDecoder = new TextDecoder();
+
+  async function pump(reader) {
+    const result = await reader.read();
+
+    if (result.done) {
+      return 'done';
+    }
+
+    const data = textDecoder.decode(result.value, { stream: !result.done });
+
+    console.log(result.value.length)
+
+    // console.log(data.slice(0, 10))
+    // console.log(JSON.parse(data));
+
+    return new Promise(res => setTimeout(() => res(pump(reader)), 0));
+    return pump(reader);
+  }
+
+  fetch('/doodles/data')
+    .then((resp) => {
+      const reader = resp.body.getReader();
+      console.log(reader.constructor)
+
+      return pump(reader);
+    });
+</script>

@@ -1,0 +1,23 @@
+@import "variables";
+
+.root {
+  float: left;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    // background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  span {
+    display: block;
+
+    height: $topbar-height;
+    width: $topbar-height;
+    padding: 0px 12px;
+
+    color: #333;
+    font-size: 0.6 * $topbar-height;
+    line-height: $topbar-height;
+  }
+}

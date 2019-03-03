@@ -1,0 +1,19 @@
+@import "variables";
+
+.noScroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+.withoutFilterTabs {
+  height: 100%;
+
+  transition: transform $filter-tabs-container-transition-duration;
+  transform: translateY(-1 * $filter-tabs-container-height);
+}
+
+.withFilterTabs {
+  composes: withoutFilterTabs;
+
+  transform: translateY(0px);
+}

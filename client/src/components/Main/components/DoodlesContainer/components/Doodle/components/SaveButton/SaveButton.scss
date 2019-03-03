@@ -1,0 +1,13 @@
+@import "variables";
+
+.root {
+  composes: global(glyphicon);
+}
+
+.notSaved {
+  composes: root global(glyphicon-floppy-disk);
+}
+
+.saved {
+  composes: root global(glyphicon-floppy-saved);
+}

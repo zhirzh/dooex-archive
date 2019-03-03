@@ -1,0 +1,15 @@
+@import "variables";
+
+.root {
+  composes: global(navbar) global(navbar-default) global(navbar-fixed-top) global(container-fluid);
+
+  height: $topbar-height;
+  z-index: 1;
+
+  img {
+    $fraction: 0.8;
+
+    height: $fraction * $topbar-height;
+    margin-top: (0.5 * (1 - $fraction)) * $topbar-height;
+  }
+}

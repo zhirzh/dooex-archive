@@ -1,0 +1,13 @@
+{
+  "name": "dooex",
+  "version": "1.0.0",
+  "author": "Shirsh Zibbu <zibbu.shirsh+github@gmail.com>",
+  "private": true,
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
+  "scripts": {
+    "postinstall": "bash postinstall.sh"
+  }
+}

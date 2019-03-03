@@ -1,0 +1,35 @@
+absolute
+  native - path, fs
+    default
+    named
+
+  external - react, redux
+    default
+    named
+
+  custom - src/*, reducers/**
+    default
+    named
+
+  components - components/**
+    default
+    named
+
+relative
+  native
+    default
+    named
+
+  external
+    default
+    named
+
+  custom
+    default
+    named
+
+  components
+    default
+    named
+
+styles

@@ -1,0 +1,28 @@
+"/"
+  HomeLayout
+    TopBar
+    Home
+
+  "/info"
+    InfoModal
+
+"/expo"
+  Expo
+
+"/search"
+  SearchLayout
+    SearchBar
+    Home
+
+  "/info"
+    InfoModal
+
+"/saved"
+  HomeLayout
+    SearchBar
+    Home
+
+  "/info"
+    InfoModal
+
+

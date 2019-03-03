@@ -1,0 +1,19 @@
+.root {
+  composes: global(btn);
+}
+
+.saveIcon {
+  composes: global(fa) global(fa-fw);
+}
+
+.saved {
+  composes: saveIcon global(fa-star);
+}
+
+.notSaved {
+  composes: saveIcon global(fa-star-o);
+}
+
+.isSaving {
+  composes: saveIcon global(fa-star-half-o);
+}

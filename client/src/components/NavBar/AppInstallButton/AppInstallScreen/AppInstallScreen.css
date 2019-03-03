@@ -1,0 +1,6 @@
+.root {
+  composes: global(modal) global(show);
+
+  background-color: rgba(0, 0, 0, 0.62);
+  display: block;
+}

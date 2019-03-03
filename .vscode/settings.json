@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/build": true,
+    "**/lib": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "data/raw": true,
+    "server/public/tunnel": true
+  }
+}

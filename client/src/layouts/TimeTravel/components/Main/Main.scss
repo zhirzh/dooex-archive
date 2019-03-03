@@ -1,0 +1,15 @@
+.options {
+  composes: global(text-center);
+
+  margin-top: 30px;
+}
+
+.radioButton {
+  composes: global(btn) global(btn-default);
+
+  width: 100px;
+}
+
+.radioButtonActive {
+  composes: radioButton global(active);
+}

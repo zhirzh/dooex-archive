@@ -1,0 +1,17 @@
+.root {
+  &::before {
+    content: attr(data-hint);
+
+    position: absolute;
+    top: 30%;
+
+    width: 100%;
+
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0.5;
+    text-align: center;
+
+    transform: translateY(-50%);
+  }
+}

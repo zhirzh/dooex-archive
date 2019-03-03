@@ -1,0 +1,12 @@
+.root {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+
+  font-family: monospace;
+  opacity: 0.3;
+  text-align: center;
+  white-space: nowrap;
+
+  transform: translate(-50%, -50%) scale(2.4);
+}

@@ -1,0 +1,44 @@
+@import "variables";
+
+.root {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+
+  img {
+    width: 100%;
+  }
+}
+
+.heading {
+  padding: 10px;
+  border-radius: 0px;
+  color: #333;
+  // border-bottom: 1px solid #ddd;
+  font-size: 20px;
+}
+
+.actions {
+  float: right;
+
+  a,
+  button {
+    border: none;
+    margin-top: -2px;
+
+    padding: 0px;
+    background-color: transparent;
+
+    span {
+      padding: 0px 10px;
+      vertical-align: text-top;
+    }
+  }
+}
+
+.saveButton {
+  composes: global(glyphicon) global(glyphicon-floppy-disk);
+}
+
+.saved {
+  composes: saveButton global(glyphicon-floppy-saved);
+}

@@ -1,0 +1,13 @@
+.root {
+  composes: global(modal) global(show);
+
+  background-color: rgba(0, 0, 0, 0.62);
+  display: block;
+}
+
+.externalLink {
+  composes: global(fa) global(fa-external-link);
+
+  font-size: 0.8em;
+  padding-left: 6px;
+}

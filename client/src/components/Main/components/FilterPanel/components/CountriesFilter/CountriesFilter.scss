@@ -1,0 +1,25 @@
+@import "variables";
+
+.root {
+  composes: global(form-group);
+
+  position: relative;
+
+  & > div:first-of-type {
+    position: relative;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: 6px 12px;
+  padding-right: $input-reset-size;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  text-transform: capitalize;
+}
+
+.option {
+  text-transform: capitalize;
+}

@@ -1,0 +1,23 @@
+.root {
+  composes: global(table);
+
+  margin-bottom: 0px;
+}
+
+.root tr:first-of-type td {
+  border: none;
+}
+
+.labelType {
+  composes: global(col-xs-2) global(col-sm-1);
+
+  text-transform: capitalize;
+}
+
+.label {
+  composes: global(label) global(label-default);
+
+  display: inline-block;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
